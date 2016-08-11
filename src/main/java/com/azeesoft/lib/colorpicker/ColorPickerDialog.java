@@ -436,7 +436,7 @@ public class ColorPickerDialog extends Dialog {
         color= Color.argb(opacity, Color.red(color), Color.green(color), Color.blue(color));
         colorPreviewBox.setBackgroundColor(color);
 
-        mHexVal="#"+Integer.toHexString(color);
+        mHexVal="#"+toEightLengthHexString(color);
 
         //System.out.println("Retrieved Color: " + color + " (#" + mHexVal + ")");
 
@@ -549,7 +549,7 @@ public class ColorPickerDialog extends Dialog {
      * @param color Color to be applied to the last color and current color in the ColorPicker
      */
     public void setLastColor(int color){
-        setLastColor("#"+Integer.toHexString(color));
+        setLastColor("#"+toEightLengthHexString(color));
     }
 
     /**
@@ -683,6 +683,14 @@ public class ColorPickerDialog extends Dialog {
         opacityPicker.setThumb(opacityThumbDrawable);
     }
 
+	
+	
+	private static String toEightLengthHexString(int value){
+		char[] ret=new char[]{'0','0','0','0','0','0','0','0'};
+		char[] hex=Integer.toHexString(value).toCharArray();
+		System.arraycopy(hex,0,ret,7-hex.length,hex.length);
+		return new String(hex);
+	}
     /**
      * Interface definition for a callback to be invoked when the user picks a color by tapping the positive action
      */
