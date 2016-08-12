@@ -161,7 +161,7 @@ public class ColorPickerDialog extends Dialog {
     private void init(final Context context){
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         setContentView(LayoutInflater.from(context).inflate(R.layout.dialog_root, null));
-        setTitle("Pick a color");
+        setTitle(R.string.pickColor);
 
         initColor=getLastColor(context);
 
