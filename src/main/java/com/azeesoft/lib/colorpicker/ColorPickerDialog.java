@@ -309,7 +309,7 @@ public class ColorPickerDialog extends Dialog {
                 if (onColorPickedListener != null)
                     onColorPickedListener.onColorPicked(mColor, mHexVal);
 
-                Stools.saveLastColor(getContext(), mHexVal);
+                Stools.saveLastColor(getContext(), mColor);
 
                 dismiss();
             }
@@ -549,17 +549,8 @@ public class ColorPickerDialog extends Dialog {
      * @param color Color to be applied to the last color and current color in the ColorPicker
      */
     public void setLastColor(int color){
-        setLastColor("#"+toEightLengthHexString(color));
-    }
-
-    /**
-     * Sets the last color and current color in the ColorPicker
-     *
-     * @param hexVal Hexadecimal String form of the color to be applied to the last color and current color in the ColorPicker
-     */
-    public void setLastColor(String hexVal){
-        Stools.saveLastColor(getContext(), hexVal);
-        initColor=Color.parseColor(hexVal);
+        Stools.saveLastColor(getContext(), color);
+        initColor=color;
         reloadLastColor();
     }
 

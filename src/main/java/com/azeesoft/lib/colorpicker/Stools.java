@@ -33,12 +33,11 @@ public class Stools {
      * @param context Context
      * @param hexaVal Color to store in hexadecimal form (Eg: #ff000000 or #000000)
      */
-    public static void saveLastColor(Context context,String hexaVal){
+    public static void saveLastColor(Context context,int hexaVal){
         try {
-            Color.parseColor(hexaVal);
             SharedPreferences sharedPreferences=context.getSharedPreferences("colpick", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor=sharedPreferences.edit();
-            editor.putString(SP_KEY_LAST_COLOR,hexaVal);
+            editor.putInt(SP_KEY_LAST_COLOR,hexaVal);
             editor.commit();
         } catch (Exception e) {
             e.printStackTrace();
