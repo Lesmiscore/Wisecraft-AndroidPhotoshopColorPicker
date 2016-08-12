@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.os.Build;
 
 
 
@@ -160,6 +161,10 @@ public class ColorPickerDialog extends Dialog {
 
     private void init(final Context context){
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        	getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        	getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
         setContentView(LayoutInflater.from(context).inflate(R.layout.dialog_root, null));
         setTitle(R.string.pickColor);
 
