@@ -161,7 +161,7 @@ public class ColorPickerDialog extends Dialog {
     private void init(final Context context){
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         setContentView(LayoutInflater.from(context).inflate(R.layout.dialog_root, null));
-        setTitle("Pick a color");
+        setTitle(R.string.pickColor);
 
         initColor=getLastColor(context);
 
@@ -679,7 +679,7 @@ public class ColorPickerDialog extends Dialog {
 	private static String toEightLengthHexString(int value){
 		char[] ret=new char[]{'0','0','0','0','0','0','0','0'};
 		char[] hex=Integer.toHexString(value).toCharArray();
-		System.arraycopy(hex,0,ret,7-hex.length,hex.length);
+		System.arraycopy(hex,0,ret,8-hex.length,hex.length);
 		return new String(hex);
 	}
     /**
