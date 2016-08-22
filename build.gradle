@@ -9,6 +9,9 @@ android {
         targetSdkVersion 23
         versionCode 9
         versionName "1.0.9"
+        jackOptions {
+			enabled true
+		}
     }
     buildTypes {
         release {
