@@ -279,7 +279,7 @@ public class ColorPickerDialog extends Dialog {
                     String h = getPlainComponentValue(hue.getText().toString());
                     String s = getPlainComponentValue(sat.getText().toString());
                     String v = getPlainComponentValue(val.getText().toString());
-                    int a = Integer.parseInt(getPlainComponentValue(alpha.getText().toString()));
+                    int a = Integer.valueOf(getPlainComponentValue(alpha.getText().toString()));
                     colorEditDialog.setModeAndValues(ColorEditDialog.MODE_HSV, h, s, v, a);
                     colorEditDialog.show();
                 } catch (Exception e) {
@@ -295,7 +295,7 @@ public class ColorPickerDialog extends Dialog {
                     String r=getPlainComponentValue(red.getText().toString());
                     String g=getPlainComponentValue(green.getText().toString());
                     String b=getPlainComponentValue(blue.getText().toString());
-                    int a=Integer.parseInt(getPlainComponentValue(alpha.getText().toString()));
+                    int a=Integer.valueOf(getPlainComponentValue(alpha.getText().toString()));
                     colorEditDialog.setModeAndValues(ColorEditDialog.MODE_RGB,r,g,b,a);
                     colorEditDialog.show();
                 } catch (Exception e) {

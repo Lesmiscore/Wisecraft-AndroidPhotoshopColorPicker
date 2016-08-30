@@ -126,9 +126,9 @@ public class ColorEditDialog extends Dialog {
                 @Override
                 public void onClick(View v) {
                     try {
-                        int red=Integer.parseInt(val1.getText().toString());
-                        int green=Integer.parseInt(val2.getText().toString());
-                        int blue=Integer.parseInt(val3.getText().toString());
+                        int red=Integer.valueOf(val1.getText().toString());
+                        int green=Integer.valueOf(val2.getText().toString());
+                        int blue=Integer.valueOf(val3.getText().toString());
 
                         if(red>=0 && red<=255 && green>=0 && green<=255 && blue>=0 && blue<=255){
                             if(onColorEditedListener!=null){
@@ -161,9 +161,9 @@ public class ColorEditDialog extends Dialog {
                 @Override
                 public void onClick(View v) {
                     try {
-                        int hue=Integer.parseInt(val1.getText().toString());
-                        int sat=Integer.parseInt(val2.getText().toString());
-                        int val=Integer.parseInt(val3.getText().toString());
+                        int hue=Integer.valueOf(val1.getText().toString());
+                        int sat=Integer.valueOf(val2.getText().toString());
+                        int val=Integer.valueOf(val3.getText().toString());
 
                         if(hue<0 || hue>360){
                             Toast.makeText(getContext(),"Hue should be between 0"+"\u00b0"+" and 360"+"\u00b0",Toast.LENGTH_LONG).show();
