@@ -175,19 +175,19 @@ public class ColorPickerDialog extends Dialog {
             }
         });
 
-        huePicker=(HuePicker)findViewById(R.id.hueBar);
-        opacityPicker=(OpacityPicker)findViewById(R.id.opacityBar);
-        satValPicker=(SatValPicker)findViewById(R.id.satValBox);
-        colorPreviewBox=(LinearLayout)findViewById(R.id.colorPreviewBox);
-        oldColorPreviewBox=(LinearLayout)findViewById(R.id.oldColorPreviewBox);
-        hexHolder=(RelativeLayout)findViewById(R.id.hexHolder);
-        pickButton=(AppCompatButton)findViewById(R.id.pickButton);
-        cancelButton=(AppCompatButton)findViewById(R.id.cancelButton);
-        colorComponents=(RelativeLayout)findViewById(R.id.colorComponents);
-        hsv=(RelativeLayout)findViewById(R.id.hsv);
-        rgb=(RelativeLayout)findViewById(R.id.rgb);
-        colorPickerRootView=(ColorPickerRootView)findViewById(R.id.colorPickerRoot);
-        hexVal=(EditText)findViewById(R.id.hexVal);
+        huePicker= findViewById(R.id.hueBar);
+        opacityPicker= findViewById(R.id.opacityBar);
+        satValPicker= findViewById(R.id.satValBox);
+        colorPreviewBox= findViewById(R.id.colorPreviewBox);
+        oldColorPreviewBox= findViewById(R.id.oldColorPreviewBox);
+        hexHolder= findViewById(R.id.hexHolder);
+        pickButton= findViewById(R.id.pickButton);
+        cancelButton= findViewById(R.id.cancelButton);
+        colorComponents= findViewById(R.id.colorComponents);
+        hsv= findViewById(R.id.hsv);
+        rgb= findViewById(R.id.rgb);
+        colorPickerRootView= findViewById(R.id.colorPickerRoot);
+        hexVal= findViewById(R.id.hexVal);
 
 
 
@@ -221,16 +221,16 @@ public class ColorPickerDialog extends Dialog {
             }
         });
 
-        hex=(TextView)findViewById(R.id.hex);
-        hue=(TextView)findViewById(R.id.hue);
-        sat=(TextView)findViewById(R.id.sat);
-        val=(TextView)findViewById(R.id.val);
-        red=(TextView)findViewById(R.id.red);
-        green=(TextView)findViewById(R.id.green);
-        blue=(TextView)findViewById(R.id.blue);
-        alpha=(TextView)findViewById(R.id.alpha);
-        hsvEditIcon=(ImageView)findViewById(R.id.hsvEditIcon);
-        rgbEditIcon=(ImageView)findViewById(R.id.rgbEditIcon);
+        hex= findViewById(R.id.hex);
+        hue= findViewById(R.id.hue);
+        sat= findViewById(R.id.sat);
+        val= findViewById(R.id.val);
+        red= findViewById(R.id.red);
+        green= findViewById(R.id.green);
+        blue= findViewById(R.id.blue);
+        alpha= findViewById(R.id.alpha);
+        hsvEditIcon= findViewById(R.id.hsvEditIcon);
+        rgbEditIcon= findViewById(R.id.rgbEditIcon);
 
         huePicker.setOnHuePickedListener(new HuePicker.OnHuePickedListener() {
             @Override

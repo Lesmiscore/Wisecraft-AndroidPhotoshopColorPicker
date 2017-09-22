@@ -46,19 +46,19 @@ public class ColorEditDialog extends Dialog {
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         setContentView(LayoutInflater.from(context).inflate(R.layout.dialod_edit_color_root, null));
 
-        colorEditorRoot=(RelativeLayout)findViewById(R.id.colorEditorRoot);
+        colorEditorRoot= findViewById(R.id.colorEditorRoot);
 
-        doneButton=(AppCompatButton)findViewById(R.id.doneEditing);
-        cancelButton=(AppCompatButton)findViewById(R.id.cancelEditing);
-        name1=(TextView)findViewById(R.id.name1);
-        name2=(TextView)findViewById(R.id.name2);
-        name3=(TextView)findViewById(R.id.name3);
-        suffix1=(TextView)findViewById(R.id.suffix1);
-        suffix2=(TextView)findViewById(R.id.suffix2);
-        suffix3=(TextView)findViewById(R.id.suffix3);
-        val1=(EditText)findViewById(R.id.val1);
-        val2=(EditText)findViewById(R.id.val2);
-        val3=(EditText)findViewById(R.id.val3);
+        doneButton= findViewById(R.id.doneEditing);
+        cancelButton= findViewById(R.id.cancelEditing);
+        name1= findViewById(R.id.name1);
+        name2= findViewById(R.id.name2);
+        name3= findViewById(R.id.name3);
+        suffix1= findViewById(R.id.suffix1);
+        suffix2= findViewById(R.id.suffix2);
+        suffix3= findViewById(R.id.suffix3);
+        val1= findViewById(R.id.val1);
+        val2= findViewById(R.id.val2);
+        val3= findViewById(R.id.val3);
 
         setModeAndValues(MODE_HSV, "", "", "",255);
 
